@@ -1,4 +1,4 @@
-class ThreadEx10 {
+class ThreadEx10 implements Runnable {
 	static boolean autoSave = false;
 	
 	public static void main(String[] args) {
