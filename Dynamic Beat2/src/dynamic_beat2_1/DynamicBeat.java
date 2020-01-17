@@ -1,6 +1,7 @@
-package dynamic_beat_1;
+package dynamic_beat2_1;
 
 import javax.swing.JFrame;
+
 
 public class DynamicBeat extends JFrame{
 
