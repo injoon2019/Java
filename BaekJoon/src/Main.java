@@ -8,27 +8,23 @@ public class Main {
 	public static void main(String[] args) {
 		Scanner in = new Scanner(System.in);
 		
-		String temp1 = new String(in.nextLine());
-		String[] temp2 = temp1.split(" ");
-		String A = temp2[0];
-		String B = temp2[1];
+		int n= in.nextInt();
+		StringBuilder temp= new StringBuilder(in.nextLine());
 		
-		int difference = B.length()-A.length()+1;
-		int[] arr = new int[difference];
-		
-		for(int i=0; i<difference; i++) {
-			int count = 0;
-			for(int k=i; k<A.length()+i;k++) {
-				if(A.charAt(k-i) != B.charAt(k)) {
-					count++;
-				}
-			}
-			
-			arr[i]=count;
+		for(int i=0; i<n; i++) {
+			temp= new StringBuilder(in.nextLine());
+			temp.reverse();
+			StringBuilder jun = new StringBuilder();
+			String[] temp2 = temp.toString().split(" ");
+			int a = Integer.parseInt(temp2[0]);
+			int b = Integer.parseInt(temp2[1]);
+			String ans =  Integer.toString(a+b);
+			jun.append(ans);
+			jun.reverse();
+			System.out.println(Integer.parseInt(jun.toString()));
 		}
 		
-		Arrays.sort(arr);
-		System.out.println(arr[0]);
+		
 		
 		in.close();
 	}
